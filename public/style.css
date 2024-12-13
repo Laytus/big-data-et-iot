@@ -1,0 +1,127 @@
+:root {
+    --principal-bg-color: #004864;
+    --secondary-bg-color: #012d3f;
+    --terciary-bg-color: #FCFCFC;
+
+    --primary-text-color: #cbd4dd;
+    --nav-text-color: #fff;
+
+    --main-text-font-size: 12pt;
+    --h1-text-font-size: 2rem;
+    --h3-text-font-size: 1.1rem;
+    --normal-text-font-size: 1rem;
+
+    --font-family: 'Inter', sans-serif;
+
+    --padding-nav: 1rem 3rem;
+    --padding-content: 1.1rem 3.5rem;
+    --padding-button: 0.5rem 0.8rem;
+
+    --gap-nav: 2rem;
+    --gap-content: 3rem;
+    --gap-main-content: 2.2rem;
+
+    --logo-width: 10rem;
+    --image-width: 38rem;
+}
+
+html, body {
+    background-color: var(--principal-bg-color);
+    
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+    
+    font-family: var(--font-family);
+    font-size: var(--main-text-font-size);
+    color: var(--primary-text-color);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 100%;
+}
+
+/* ----------------- */
+/* ------ NAV ------ */
+/* ----------------- */
+#NAV {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-nav);
+
+    padding: var(--padding-nav);
+
+    background-color: var(--secondary-bg-color);
+}
+
+#logo-ecl {
+    width: var(--logo-width);
+    height: auto;
+}
+
+#NAV #navbar {
+    display: flex;
+}
+
+#NAV .navbar-link {
+    padding: var(--padding-button);
+
+    color: var(--nav-text-color);
+    text-decoration: none;
+    /* border: none; */
+    /* border-radius: 10%; */
+}
+
+#NAV .navbar-link h3 {
+    font-size: var(--h3-text-font-size);
+}
+
+/* --------------------- */
+/* ------ CONTENT ------ */
+/* --------------------- */
+#CONTENT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-content);
+
+    flex-shrink: 0;
+
+    padding: var(--padding-content);
+    /* color: #ffffff;  */
+}
+
+#CONTENT .main-content {
+    display: flex;
+    align-items: flex-start;
+
+    align-self: stretch;
+
+    gap: var(--gap-main-content);
+    
+}
+
+#CONTENT .main-title {
+    font-size: var(--h1-text-font-size);
+}
+
+#CONTENT .main-content .image {
+    width: var(--image-width);
+    aspect-ratio: 16 / 9;
+}
+
+#CONTENT .main-content p {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+
+  
