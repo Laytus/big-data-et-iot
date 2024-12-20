@@ -2,30 +2,127 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="stylesheet" href="globals.css" /> -->
+         <title>Big Data et IoT</title>
         <link rel="stylesheet" href="style.css" /> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="main">
-            <div id="NAV">
-                <!-- <img id="logo-ecl" src="img/2024_LOGO-CENTRALE-H_ROUGE_RVB.svg" /> -->
-                <img id="logo-ecl" src="img/logo-ecl-white.svg" />
-                <div id="navbar">
-                    <a class="navbar-link" href="index.html"><h3>INTRODUCTION</h3></a>
-                    <a class="navbar-link" href="#"><h3>AVANTAGES</h3></a>
-                    <a class="navbar-link" href="#"><h3>DÉFIS ET IMPACTS</h3></a>
-                    <a class="navbar-link" href="#"><h3>VERS UN FUTUR DURABLE</h3></a>
+            <div id="header">
+                <div id="NAV">
+                    <!-- <img id="logo-ecl" src="img/2024_LOGO-CENTRALE-H_ROUGE_RVB.svg" /> -->
+                    <img id="logo-ecl" src="img/logo-ecl-white.svg" />
+    
+                    <!-- Button Nav -->
+                    <!-- <button id="menu-button">☰</button> -->
+                    <button id="menu-button"><img id="menu-icon" src="img/ham-menu-icon.svg" /></button>
+    
+                    
+                    <!-- Menu -->
+                    <nav id="navbar" class="navbar">
+                        <a class="navbar-link" href="index.html"><h3>INTRODUCTION</h3></a>
+                        <a class="navbar-link" href="avantages.html"><h3>AVANTAGES</h3></a>
+                        <a class="navbar-link" href="defis.html"><h3>DÉFIS ET IMPACTS</h3></a>
+                        <a class="navbar-link" href="futur.html"><h3>VERS UN FUTUR DURABLE</h3></a>
+                        <a class="navbar-link" href="conclusion.html"><h3>CONCLUSION</h3></a>
+                    </nav>
+                </div>
+                <div id="cours-title-nav">
+                    <h2 id="cours-title">MOD2.1 : Défis informatiques du Big Data</h2>
                 </div>
             </div>
             <div id="CONTENT">        
                 <h1 class="main-title">Big data et objets connectés (Internet des Objets)</h1>
-                <div class="main-content">
-                    <p class="text">
-                        Hello World!
-                    </p>
-                    <img class="image" src="img/internet-objets-iot-statistiques.jpg" />
+                <div class="content-section">
+                    <h2 class="sub-title">AVANTAGES</h2>
+                    <div class="main-content">
+                        <div class="paragraphe" id="paragraphe-1">
+                            <h3 class="sub-sub-title">Brève introduction sur la convergence entre le Big Data et l'IoT</h3>
+                            <p class="text" id="text-1">
+                                Pour comprendre la convergence entre Big Data et l'Internet des Objets (IoT), il est fondamental de définir initialement ces concepts. Le Big Data se définit comme la "gestion et le traitement de jeux de données extrêmement larges, complexes et divers" \cite{nist2019}, dont les caractéristiques principales sont regroupées dans les célèbres "5 V" : volume, vitesse, variété, véracité et variabilité. Ces dimensions déterminent les capacités des architectures évolutives pour stocker, manipuler et analyser les données de manière efficace.
+                            </p>
+
+                            <img class="image" src="img/5v.jpg" />
+                            
+                            <p class="text" id="text-1">
+                                L'Internet des Objets (IoT) est conceptualisé comme l'"infrastructure qui fournit des services avancés par l'interconnexion d'objets (physiques et virtuels) grâce à l'interopérabilité des technologies de l'information et de la communication présente et future" \cite{itu2012}. Dans ce contexte, un "objet" correspond à une entité identifiable du monde physique ou informatique qui peut s'intégrer dans des réseaux de communication.
+                                <br><br>
+                                Le point de convergence entre ces deux concepts réside dans les données. L'IoT établit une interconnexion entre plusieurs objets qui permet un flux continu d'information. Les capteurs capturent des données de l'environnement physique et numérique, les transmettant à travers le réseau. À mesure que le nombre d'objets connectés augmente, le volume de données transmises augmente proportionnellement.
+                            </p>
+                            
+                            <img class="image" src="img/iot3.jpeg" />
+                            
+                            <p class="text" id="text-1">
+                                Le mécanisme typique d'interaction implique que le capteur (objet IoT) collecte des données, les transmet à un serveur centralisé où elles sont traitées. Par la suite, de nouvelles transmissions peuvent être générées vers le capteur original, d'autres capteurs ou actionneurs. 
+                                <br><br>
+                                La croissance exponentielle des dispositifs connectés rend indispensable l'application de techniques de Big Data pour garantir que l'information recueillie soit significative et sécurisée. À ce point, le Big Data devient un outil fondamental pour donner structure et sens à l'ensemble des données, permettant d'obtenir des résultats et des conclusions qui ne seraient pas évidents par des analyses traditionnelles.
+                            </p>
+
+                        </div>
+                        <!-- <div class="paragraphe" id="paragraphe-1">
+                            <p class="text" id="text-1">
+                                L'Internet des Objets (IoT) est conceptualisé comme l'"infrastructure qui fournit des services avancés par l'interconnexion d'objets (physiques et virtuels) grâce à l'interopérabilité des technologies de l'information et de la communication présente et future" \cite{itu2012}. Dans ce contexte, un "objet" correspond à une entité identifiable du monde physique ou informatique qui peut s'intégrer dans des réseaux de communication.
+                                <br><br>
+                                Le point de convergence entre ces deux concepts réside dans les données. L'IoT établit une interconnexion entre plusieurs objets qui permet un flux continu d'information. Les capteurs capturent des données de l'environnement physique et numérique, les transmettant à travers le réseau. À mesure que le nombre d'objets connectés augmente, le volume de données transmises augmente proportionnellement.
+                            </p>
+                        </div> -->
+                        <div class="paragraphe" id="paragraphe-2">
+                            <h3 class="sub-sub-title">Principales applications</h3>
+                            <p class="text" id="text-1">
+                                La relation entre IoT et Big Data ouvre de nouvelles possibilités dans un monde de plus en plus interconnecté numériquement. Selon un rapport de McKinsey Company [9], les dispositifs IoT s’appliquent principalement dans neuf domaines : corps humain, foyers, retail, bureaux, production standardisée, production personnalisée, véhicules, villes et environnements ruraux. Dans le secteur de la santé, l’IoT permet de surveiller en temps réel la santé des patients souffrant de maladies chroniques et d’administrer des systèmes de médication intelligents. Les sportifs, tant professionnels qu’amateurs, incorporent des capteurs de santé et d’activité physique pour évaluer leur performance pendant l’exercice [10]. 
+                                
+                                <br><br>
+                                
+                                Les foyers vivent l’émergence des "Smart Home", où les dispositifs électroniques se connectent via des réseaux locaux pour un contrôle centralisé. Les utilisateurs peuvent opérer à distance les systèmes d’éclairage, de température et de sécurité. 
+                                
+                            </p>
+                            <img class="image" src="img/smartho.jpg" />
+                            <p class="text" id="text-1">
+
+                                Dans les secteurs industriels comme la manufacture et le retail, l’IoT automatise des tâches au moyen de capteurs qui mesurent la production et permettent des analyses d’efficacité et de maintenance. Les "Smart Cities" utilisent cette technologie pour surveiller les aspects environnementaux, le trafic et l’éclairage, facilitant l’optimisation du développement urbain. 
+                                
+                                <br><br>
+
+                                Le secteur de la sécurité bénéficie également de systèmes intelligents surveillables de façon distante et continue. Quelques exemples de ce type d’applications correspondent aux "systèmes de surveillance intelligents, verrous intelligents, systèmes de détection d’incendie et systèmes de réponses d’urgence" [11].
+                            </p>
+                        </div>
+                        <div class="paragraphe" id="paragraphe-3">
+                            <h3 class="sub-sub-title">Principaux avantages</h3>
+                            <p class="text" id="text-1">
+                                La synergie entre Big Data et IoT offre des avantages significatifs. Le Big Data permet d’appliquer des techniques avancées d’analyse sur les données recueillies, filtrant l’information pertinente et augmentant l’efficacité du processus. Simultanément, l’IoT alimente le système de Big Data avec des données pour de nouvelles analyses. 
+                                
+                                <br><br>
+
+                                Dans le domaine commercial, les organisations peuvent mieux comprendre les comportements des clients, les besoins des produits et les stratégies de marketing par l’analyse des données de dispositifs mobiles et de systèmes de divertissement. 
+                                
+                                <br><br>
+
+                                En santé, l’analyse de Big Data améliore l’attention du patient en mesurant sa condition, permettant de générer des traitements personnalisés et plus efficaces. Les "Smart Cities" utilisent ces données pour évaluer l’information de trafic et d’environnement, améliorant la prise de décisions. 
+                                
+                                <br><br>
+
+                                D’une perspective économique, McKinsey Company estime que "pour 2030, on pourrait générer entre 5,5 et 12,6 billions de dollars de valeur mondiale" [12]. Cette valeur croît proportionnellement avec l’adoption de solutions IoT et Big Data. 
+                                
+                                <br><br>
+
+                                Dans les environnements industriels, incluant la manufacture et les hôpitaux, on projette un potentiel de "valeur économique de 26% pour 2030" [12]. Le secteur de la santé représenterait entre "10% et 14% de la valeur économique estimée" [12] pour cette même année.
+                            </p>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <p class="eleves">
+                Élèves : Pablo ARIAS SANCHEZ | Heber ARTEAGA | Marco Antonio ORTEGA GARCIA | Yann-Luca OLIVIER
+            </p>
+            <p class="enseignant">
+                Enseignant : Stephane DERRODE
+            </p>
+        </footer>
+        <script src="script.js"></script>
     </body>
 </html>

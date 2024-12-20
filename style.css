@@ -8,17 +8,19 @@
     --nav-text-color: #fff;
     --alt-nav-text-color: #F4A261;
 
-    --main-text-font-size: 12pt;
-    --h1-text-font-size: 2rem;
-    --h2-text-font-size: 1.5rem;
-    --h3-text-font-size: 1.1rem;
+    --main-text-font-size: 13pt;
+    --h1-text-font-size: 1.6rem;
+    --h2-text-font-size: 1.3rem;
+    --h3-text-font-size: 1rem;
     --normal-text-font-size: 1rem;
     
-    --main-text-ipad-font-size: 10pt;
+    --main-text-ipad-font-size: 12pt;
 
-    --font-family: 'Inter', sans-serif;
+    --font-family-body: 'Roboto', sans-serif;
+    --font-family-titles: 'Merryweather', sans-serif;
 
-    --padding-nav: 1rem 3rem;
+    --padding-nav: 0.7rem 3rem;
+    --padding-cours: 0.5rem 3rem;
     --padding-content: 1.1rem 3.5rem;
     --padding-button: 0.5rem 0.8rem;
 
@@ -28,6 +30,9 @@
     --gap-main-content: 2.2rem;
 
     --logo-width: 9rem;
+    --logo-width-ipad: 8rem;
+    --menu-icon-width: 2rem;
+    --menu-icon-width-ipad: 2rem;
     /* --image-width: 38rem; */
     --image-width: 100%;
 }
@@ -43,9 +48,23 @@ html, body {
 
     width: 100%;
     
-    font-family: var(--font-family);
+    font-family: var(--font-family-body);
     font-size: var(--main-text-font-size);
     color: var(--primary-text-color);
+}
+h1, h2, h3 {
+    font-family: var(--font-family-titles);
+    margin: 0;
+    padding: 0;
+}
+
+/* h3 {
+    margin-bottom: 1rem;
+} */
+
+.image {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #main {
@@ -53,6 +72,7 @@ html, body {
     flex-direction: column;
     
     max-width: 100%;
+    margin-bottom: 4rem 0rem 0rem 4rem;
 }
 
 /* ----------------- */
@@ -105,7 +125,7 @@ html, body {
 }
 
 #menu-icon {
-    width: 2.5rem;
+    width: var(--menu-icon-width);
     height: auto;
 }
 
@@ -133,7 +153,12 @@ html, body {
     background-color: var(--four-bg-color);
     display: flex;
     justify-content: space-around;
+    padding: var(--padding-cours);
+}
 
+#cours-title {
+    margin: 0;
+    padding: 0;
 }
 
 /* --------------------- */
@@ -149,6 +174,8 @@ html, body {
 
     padding: var(--padding-content);
     /* color: #ffffff;  */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 #CONTENT .content-section {
@@ -168,18 +195,39 @@ html, body {
     align-self: stretch;
 
     gap: var(--gap-main-content); */
-    display: grid;
+    
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-main-content);
+    gap: var(--gap-main-content); */
+
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+
+    -webkit-column-rule: 2px solid #ccc;
+    -moz-column-rule: 2px solid #ccc;
+    column-rule: 2px solid #ccc;
+
+    /* padding: 0 1rem; */
     
 }
 
 #CONTENT .main-title {
     font-size: var(--h1-text-font-size);
+    margin-bottom: 1.5rem;
 }
 
 #CONTENT .sub-title {
     font-size: var(--h2-text-font-size);
+    margin-bottom: 0.8rem;
+}
+
+#CONTENT .sub-sub-title {
+    margin-bottom: 0.6rem;
 }
 
 #CONTENT .main-content .image {
@@ -188,14 +236,87 @@ html, body {
     height: auto;
 }
 
+#CONTENT .paragraphe {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;          
+    break-inside: avoid-column;        
+    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
+}
+
 #CONTENT .main-content p {
     margin: 0px;
     padding: 0px;
     text-align: justify;
+
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    margin-bottom: 1rem;
+}
+
+/* #CONTENT .content-conclusion {
+    width: 70%;
+    text-align: justify;
+    margin-top: 0;
+} */
+
+#CONTENT #conclusion {
+    width: 70%;
+    text-align: justify;
+    margin-top: 0;
+}
+
+#CONTENT .image-conclusion {
+    width: 70%;
+}
+
+hr {
+    height: 2px;           /* Altura de la línea */
+    border-width: 0;       /* Elimina el borde predeterminado */
+    background-color: #ccc; /* Color de la línea */
+    margin: 20px 0; 
+    width: 70%;       
+    border-radius: 10px;
+}
+
+.bibliographie {
+    width: 70%;
+}
+
+.bibliographie a {
+    color: #9f98e6; /* Un azul clásico para enlaces */
+    text-decoration: none; /* Remueve el subrayado por defecto */
+}
+
+.bibliographie a:hover, .bibliographie a:focus {
+    color: #f49a8a; /* Un tono tomate para cuando el usuario pasa el mouse por encima o selecciona el enlace */
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse por encima para destacar */
 }
 
 
-@media (max-width: 870px) {
+/* -------------------- */
+/* ------ FOOTER ------ */
+/* -------------------- */
+footer {
+    background-color: var(--four-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* color: var(--secondary-bg-color); */
+    margin: 0;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    justify-content: space-around;
+    gap: 1.4rem;
+}
+
+footer p {
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 960px) {
     #NAV {
         gap: 0px;
         justify-content: space-between;
@@ -215,8 +336,17 @@ html, body {
         transform: translateX(100%);
     }
 
+    .navbar .navbar-link {
+        margin-bottom: 1.5rem;
+    }
+
     #menu-button {
         display: block;
+    }
+
+    #logo-ecl {
+        width: var(--logo-width-ipad);
+        height: auto;
     }
 
     #CONTENT .main-content {
@@ -231,9 +361,30 @@ html, body {
         gap: var(--gap-main-content);
         
     }
+
+    #CONTENT #conclusion {
+        width: 100%;
+    }
+
+    #CONTENT .image-conclusion {
+        width: 100%;
+    }
+
+    hr {
+        height: 2px;           /* Altura de la línea */
+        border-width: 0;       /* Elimina el borde predeterminado */
+        background-color: #ccc; /* Color de la línea */
+        margin: 20px 0; 
+        width: 100%;       /* Espacio vertical antes y después de la línea */
+        border-radius: 10px;
+    }
+
+    .bibliographie {
+        width: 100%;
+    }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
     html, body {        
         font-size: var(--main-text-ipad-font-size);
     }
