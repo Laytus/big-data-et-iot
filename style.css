@@ -2,14 +2,19 @@
     --principal-bg-color: #004864;
     --secondary-bg-color: #012d3f;
     --terciary-bg-color: #FCFCFC;
+    --four-bg-color: #59788E;
 
     --primary-text-color: #cbd4dd;
     --nav-text-color: #fff;
+    --alt-nav-text-color: #F4A261;
 
     --main-text-font-size: 12pt;
     --h1-text-font-size: 2rem;
+    --h2-text-font-size: 1.5rem;
     --h3-text-font-size: 1.1rem;
     --normal-text-font-size: 1rem;
+    
+    --main-text-ipad-font-size: 10pt;
 
     --font-family: 'Inter', sans-serif;
 
@@ -17,12 +22,14 @@
     --padding-content: 1.1rem 3.5rem;
     --padding-button: 0.5rem 0.8rem;
 
-    --gap-nav: 2rem;
-    --gap-content: 3rem;
+    --gap-nav: 3rem;
+    --gap-content: 1.5rem;
+    --gap-content-section: 1.5rem;
     --gap-main-content: 2.2rem;
 
-    --logo-width: 10rem;
-    --image-width: 38rem;
+    --logo-width: 9rem;
+    /* --image-width: 38rem; */
+    --image-width: 100%;
 }
 
 html, body {
@@ -51,10 +58,17 @@ html, body {
 /* ----------------- */
 /* ------ NAV ------ */
 /* ----------------- */
+#header {
+    position: sticky;
+    top: 0;
+}
 #NAV {
+    /* position: sticky; */
+    top: 0;
     display: flex;
     align-items: center;
-    gap: var(--gap-nav);
+    justify-content: space-between;
+    /* gap: var(--gap-nav); */
 
     padding: var(--padding-nav);
 
@@ -66,9 +80,35 @@ html, body {
     height: auto;
 }
 
-#NAV #navbar {
+#NAV .navbar {
     display: flex;
 }
+
+.navbar.active {
+    transform: translateX(0) !important;
+}
+
+#menu-button {
+    display: none;
+    /* position: absolute; */
+    /* top: 20px;
+    right: 20px; */
+    color: var(--terciary-bg-color);
+    border: none;
+    /* font: 20rem; */
+    /* padding: 2rem; */
+    padding: 1rem;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+#menu-icon {
+    width: 2.5rem;
+    height: auto;
+}
+
 
 #NAV .navbar-link {
     padding: var(--padding-button);
@@ -79,8 +119,21 @@ html, body {
     /* border-radius: 10%; */
 }
 
+#NAV .navbar-link:hover, 
+#NAV .navbar-link:focus {
+    color: var(--alt-nav-text-color);
+}
+
 #NAV .navbar-link h3 {
     font-size: var(--h3-text-font-size);
+}
+
+#cours-title-nav {
+    /* position: sticky; */
+    background-color: var(--four-bg-color);
+    display: flex;
+    justify-content: space-around;
+
 }
 
 /* --------------------- */
@@ -90,7 +143,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-content);
+    /* gap: var(--gap-content); */
 
     flex-shrink: 0;
 
@@ -98,12 +151,25 @@ html, body {
     /* color: #ffffff;  */
 }
 
-#CONTENT .main-content {
+#CONTENT .content-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--gap-content-section);
+
+    flex-shrink: 0;
+}
+
+#CONTENT .main-content {
+    /* display: flex;
     align-items: flex-start;
 
     align-self: stretch;
 
+    gap: var(--gap-main-content); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--gap-main-content);
     
 }
@@ -112,9 +178,14 @@ html, body {
     font-size: var(--h1-text-font-size);
 }
 
+#CONTENT .sub-title {
+    font-size: var(--h2-text-font-size);
+}
+
 #CONTENT .main-content .image {
     width: var(--image-width);
-    aspect-ratio: 16 / 9;
+    /* aspect-ratio: 16 / 9; */
+    height: auto;
 }
 
 #CONTENT .main-content p {
@@ -124,4 +195,46 @@ html, body {
 }
 
 
-  
+@media (max-width: 870px) {
+    #NAV {
+        gap: 0px;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        background-color: var(--secondary-bg-color);
+        flex-direction: column;
+        padding: 6rem 3rem;
+        /* transition: right 0.3s ease; */
+        z-index: 999;
+        transform: translateX(100%);
+    }
+
+    #menu-button {
+        display: block;
+    }
+
+    #CONTENT .main-content {
+        /* display: flex;
+        align-items: flex-start;
+    
+        align-self: stretch;
+    
+        gap: var(--gap-main-content); */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: var(--gap-main-content);
+        
+    }
+}
+
+@media (max-width: 1040px) {
+    html, body {        
+        font-size: var(--main-text-ipad-font-size);
+    }
+}
