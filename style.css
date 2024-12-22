@@ -294,6 +294,17 @@ hr {
     text-decoration: underline; /* Subraya el enlace al pasar el mouse por encima para destacar */
 }
 
+.cite {
+    /* color: var(--primary-text-color); */
+    color: #9f98e6;
+    text-decoration: none;
+}
+
+.cite:hover, .cite:focus {
+    color: #f49a8a; /* Un tono tomate para cuando el usuario pasa el mouse por encima o selecciona el enlace */
+    /* text-decoration: underline;  */
+}
+
 
 /* -------------------- */
 /* ------ FOOTER ------ */
