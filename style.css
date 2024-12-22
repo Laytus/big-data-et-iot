@@ -305,6 +305,10 @@ hr {
     text-decoration: underline; /* Subraya el enlace al pasar el mouse por encima para destacar */
 }
 
+.bibliographie li {
+    overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es demasiado ancho */
+}
+
 
 /* -------------------- */
 /* ------ FOOTER ------ */
