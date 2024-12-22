@@ -67,6 +67,17 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
+.cite {
+    /* color: var(--primary-text-color); */
+    color: #9f98e6;
+    text-decoration: none;
+}
+
+.cite:hover, .cite:focus {
+    color: #f49a8a; /* Un tono tomate para cuando el usuario pasa el mouse por encima o selecciona el enlace */
+    /* text-decoration: underline;  */
+}
+
 #main {
     display: flex;
     flex-direction: column;
@@ -294,17 +305,6 @@ hr {
     text-decoration: underline; /* Subraya el enlace al pasar el mouse por encima para destacar */
 }
 
-.cite {
-    /* color: var(--primary-text-color); */
-    color: #9f98e6;
-    text-decoration: none;
-}
-
-.cite:hover, .cite:focus {
-    color: #f49a8a; /* Un tono tomate para cuando el usuario pasa el mouse por encima o selecciona el enlace */
-    /* text-decoration: underline;  */
-}
-
 
 /* -------------------- */
 /* ------ FOOTER ------ */
@@ -327,7 +327,7 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1060px) {
     #NAV {
         gap: 0px;
         justify-content: space-between;
@@ -375,6 +375,7 @@ footer p {
 
     #CONTENT #conclusion {
         width: 100%;
+        margin: 0px;
     }
 
     #CONTENT .image-conclusion {
