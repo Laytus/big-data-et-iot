@@ -306,7 +306,7 @@ hr {
 }
 
 .bibliographie li {
-    overflow-x: auto; /* Permite desplazamiento horizontal si el contenido es demasiado ancho */
+    word-break: break-all;
 }
 
 
